@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloRaspberryPi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SZC-L2-j9o" userLabel="2nd Position Slider">
+                                <rect key="frame" x="18" y="349" width="339" height="30"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="DvK-js-Mln"/>
+                                    <constraint firstAttribute="width" constant="335" id="PzM-l1-Qmw"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="secondSliderValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="EZy-p1-bhn"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yHU-KS-iZL" userLabel="1st Position Slider">
+                                <rect key="frame" x="18" y="289" width="339" height="30"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="0BR-mi-NyL"/>
+                                    <constraint firstAttribute="width" constant="335" id="C1Y-0M-fYc"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="firstSliderValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="HXJ-rZ-Fvm"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SZC-L2-j9o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7UU-FU-Ge8"/>
+                            <constraint firstItem="yHU-KS-iZL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="FUg-py-163"/>
+                            <constraint firstItem="yHU-KS-iZL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P6D-yh-Vp2"/>
+                            <constraint firstItem="SZC-L2-j9o" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="30" id="p1N-l6-rvv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstServoSlider" destination="yHU-KS-iZL" id="CRW-od-e55"/>
+                        <outlet property="secondServoSlider" destination="SZC-L2-j9o" id="KUB-fF-Fj7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
