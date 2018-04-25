@@ -65,9 +65,9 @@ var firstServoService = new PrimaryService({
       ],
       onWriteRequest: function(data, offset, withoutResponse, callback) {
         // https://nodejs.org/api/buffer.html
-    if (firstServoData) {
+    if (data) {
       console.log('>>> offset', offset);
-      var value = firstServoData.readInt8(offset);
+      var value = data.readInt8(offset);
       console.log('>> Received BLE write request:', value);
       // convert value to pulse
       var pulseRange = MAX_PULSE - MIN_PULSE;
@@ -102,9 +102,9 @@ var secondServoService = new PrimaryService({
       ],
       onWriteRequest: function(data, offset, withoutResponse, callback) {
         // https://nodejs.org/api/buffer.html
-    if (secondServoData) {
+    if (data) {
       console.log('>>> offset', offset);
-      var value = secondServoService.readInt8(offset);
+      var value = data.readInt8(offset);
       console.log('>> Received BLE write request:', value);
       // convert value to pulse
       var pulseRange = MAX_PULSE - MIN_PULSE;
